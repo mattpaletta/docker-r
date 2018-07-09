@@ -16,7 +16,7 @@ before_install:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
 
 install:
-  - docker image built -t r:$R_VERSION --build-arg=R_VERSION=$R_VERISION .
+  - docker image built -t r:$R_VERSION --build-arg=R_VERSION=$R_VERSION .
 
 after_success:
   - docker push r:$R_VERSION
