@@ -1,7 +1,7 @@
 sudo: required
 cache: docker
 
-language: R
+language: python
 
 services: 
   - docker
