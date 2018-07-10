@@ -1,5 +1,8 @@
 sudo: required
 cache: docker
+
+language: python
+
 services: 
   - docker
 
