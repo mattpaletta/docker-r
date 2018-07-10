@@ -13,7 +13,6 @@ env:
   - R_VERSION=3.2.0
   - R_VERSION=3.1.0
   - R_VERSION=3.0.0
-  - R_VERSION=2.9.0
 
 before_install:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
