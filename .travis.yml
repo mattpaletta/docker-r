@@ -18,7 +18,7 @@ env:
 before_install:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
 
-install:
+script:
   - docker image build -t r:$R_VERSION --build-arg=R_VERSION=$R_VERSION .
 
 after_success:
