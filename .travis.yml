@@ -26,6 +26,6 @@ before_install:
 
 script:
   - docker image build -t r-base:$R_VERSION --build-arg=R_VERSION=$R_VERSION --build-arg=TIDVERSE=$TIDYVERSE .
-  - if [ $TIDYVERSE == 1 ]; then docker tag r-base:tidyverse-$R_VERSION mattpaletta/r-base:tidyverse-$R_VERSION; else docker tag r-base:$R_VERSION mattpaletta/r-base:$R_VERSION; fi
+  - if [ $TIDYVERSE == 1 ]; then docker tag r-base:$R_VERSION mattpaletta/r-base:tidyverse-$R_VERSION; else docker tag r-base:$R_VERSION mattpaletta/r-base:$R_VERSION; fi
 after_success:
   - if [ $TIDYVERSE == 1 ]; then docker push mattpaleta/r-base:tidyverse-$R_VERSION; else docker push mattpaletta/r-base:$R_VERSION; fi
